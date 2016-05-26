@@ -44,6 +44,8 @@ While you might think that this blue outline clashes with your style, and you mi
 
 ### `:disabled`
 
+HTML inputs and buttons can be disabled by adding the word `disabled` to their tag, like this `<button disabled>Don't Click Me!</button>`. This attribute prevents the user from interacting with that element. By default, the pointer (which is usually an arrow, but becomes a pointing finger on clickable elements), will stay an arrow, and default (provided by the browser) hover and other interaction styling will be removed. This pseudo-class should be styled in a way that conveys to the user that this element cannot be interacted with. 
+
 ## Position and Index-Based Classes
 
 ### `:root`
@@ -87,5 +89,6 @@ These pseudo-classes can be used with combinators (check out [Part 1](1_selector
 * `input:out-of-range:focus`: You might put an error state on an input with invalid text, but you want it to go away when a user is typing.
 * `p:first-child:first-letter`: Adding a drop cap to the first letter of the first paragraph of an essay.
 * `:root::before`: Adding content before the start of the DOM
+* `li:nth-child(N):before`: Adding custom bullet points to lists
 
 **Keep an eye out for Part 3 of this blog post where I will discuss more advanced selectors that can be used with SASS (a beautiful CSS preprocessor).**

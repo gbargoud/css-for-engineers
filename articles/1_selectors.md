@@ -67,6 +67,36 @@ This selector refers to the actualy DOM element. When you style all `div`s, you 
 
 In many ways the exact opposite of `#id`, `*` selects literally *every* element in the DOM. Use this with caution.
 
+## Specificity
+
+If you have this as your HTML
+
+```
+<div id="unique" class="special fun"></div>
+```
+
+and this as your CSS
+
+```
+div {
+  width: 100px;
+}
+
+#unique {
+  width: 50px;
+  background-color: pink;
+}
+
+.special {
+  color: red;
+}
+
+.fun {
+  background-color:  yellow;
+  color: blue;
+}
+```
+
 ## Naming Classes and IDs
 
 It is important to choose the names you give classes and ID's carefully. Syntactically, its usually best to use lowercase words connected by hyphens like `.class-name` (fun fact: this is called kebab case). You want to pick class names and IDs the same way you would pick a variable name in any other coding project, keeping them specific, consistent, and easily extendable.
@@ -95,6 +125,16 @@ p span {
 You would get something that looked like this:
 
 **Hello** World
+
+You can also do something like this:
+
+```
+form * {
+  /* Insert styling here */
+}
+```
+
+to select all descendants of the `form`, including children, "grandchildren", etc.
 
 This is called a descendant selector, because you are selecting the descendand (`<span>`) of the parent (`<p>`). The selectors read from outside in, so first looking at all DOM elements that are `<div>`s, then inside searching for `<p>` elements. This is useful when you want to override default styling for a special component like a panel or a modal.
 
