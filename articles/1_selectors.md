@@ -67,42 +67,12 @@ This selector refers to the actualy DOM element. When you style all `div`s, you 
 
 In many ways the exact opposite of `#id`, `*` selects literally *every* element in the DOM. Use this with caution.
 
-## Specificity
-
-If you have this as your HTML
-
-```
-<div id="unique" class="special fun"></div>
-```
-
-and this as your CSS
-
-```
-div {
-  width: 100px;
-}
-
-#unique {
-  width: 50px;
-  background-color: pink;
-}
-
-.special {
-  color: red;
-}
-
-.fun {
-  background-color:  yellow;
-  color: blue;
-}
-```
-
 ## Naming Classes and IDs
 
 It is important to choose the names you give classes and ID's carefully. Syntactically, its usually best to use lowercase words connected by hyphens like `.class-name` (fun fact: this is called kebab case). You want to pick class names and IDs the same way you would pick a variable name in any other coding project, keeping them specific, consistent, and easily extendable.
 
 ## Putting Things Together
-<!-- TODO(maddie): referential selectors -->
+
 You can accomplish a lot with just the simple selectors outlined above, but sometimes you want to get fancy and complex with your CSS. You can chain together selectors to be more specific.
 
 For example, if you had this as your HTML
