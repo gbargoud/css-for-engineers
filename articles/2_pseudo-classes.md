@@ -78,7 +78,7 @@ Let's assume we have an HTML page that looks like this
 Say we wanted to specifically target `Beets`, we could use this as our CSS:
 
 ```css
-.vegetables :nth-child(2) {
+.fruits-vegetables :nth-child(2) {
   color: purple;
 }
 ```
